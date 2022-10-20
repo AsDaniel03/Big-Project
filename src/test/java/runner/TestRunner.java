@@ -17,8 +17,8 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     public void sendEmail() {
         String[] args = new String[]{
                 "asdaniel0310@gmail.com",
-                "asdaniel0310@gmail.com",
-//                "fakhri@cilsyfiolution.com",
+//                "asdaniel0310@gmail.com",
+                "fakhri@cilsyfiolution.com",
                 "Report Big Project - As Daniel",
                 "Big Project Cucumber Report",
                 "C:\\Users\\ACER\\Music\\bp baru\\Big-Project\\target\\html-reports.html"
