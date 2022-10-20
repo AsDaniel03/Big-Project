@@ -45,7 +45,7 @@ public class boardPage extends BasePage {
     private WebElement textCreate;
 
     //notes
-    @FindBy(css = "[href='/companies/61eba2c85080f47b25ddc8f8/teams/632e858e3c6e10177263cc8d/cards/633d31d8ea239fa8c202e1b1']")
+    @FindBy(css = "[href='/companies/61eba2c85080f47b25ddc8f8/teams/632e858e3c6e10177263cc8d/cards/634968d7699bc04871aae4f6']")
     private WebElement cardBoard;
     @FindBy(css = "[href='/companies/61eba2c85080f47b25ddc8f8/teams/632e858e3c6e10177263cc8d/cards/633c7ff2aa8e878b94a1db9c']")
     private WebElement cardBoard1;

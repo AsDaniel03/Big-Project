@@ -19,9 +19,6 @@ Feature: Board
     And user click icon cancel
     Then list is cancel create
 
-#    masih error
-
-
   @board4
   Scenario:User can add a card
     When user select project name
