@@ -5,7 +5,7 @@ Feature: group chat
   Given I navigated to homepage
   And I login with existing account
 
-  @gc1
+  @positive @gc1
   Scenario:User can be send a message
   When user select project name
   And user select group chat
@@ -13,7 +13,7 @@ Feature: group chat
 #  And user send image
   Then user should be send message
 
-  @gc2
+  @positive @gc2
   Scenario:User can be click icon close on message option
   When user select project name
   And user select group chat
@@ -21,7 +21,7 @@ Feature: group chat
   And user click icon cancel menu message
   Then the message undelete
 
-  @gc3
+  @positive @gc3
   Scenario:User can be click icon close on delete message
   When user select project name
   And user select group chat
@@ -29,7 +29,7 @@ Feature: group chat
   And user click cancel delete message
   Then the message undelete
 
-  @gc4
+  @positive @gc4
   Scenario:User can be delete a message
   When user select project name
   And user select group chat
@@ -37,17 +37,33 @@ Feature: group chat
   And user delete message
   Then the message has been deleted
 
-  @gc5
+  @positive @gc5
   Scenario:User can't be send a message with blank text
   When user select project name
   And user select group chat
   And user send blank message
   Then user failed send message
 
-  @gc6
+  @positive @gc6
   Scenario:User can be click logo
     When user select project name
     And user select group chat
     And user click logo
     Then user navigated to homepage
+
+  @Negative @gc7
+  Scenario: Verify user can send address without space on chat
+    When user select project name
+    And user select group chat
+    When User send address without space on chat
+    Then User can see chat section
+    And User can navigates to that link
+
+  @Negative @gc8
+  Scenario: user can't send message with enter
+    When user select project name
+    And user select group chat
+    And user fill message
+    And user send the message with enter
+    Then user can't send the message
 
