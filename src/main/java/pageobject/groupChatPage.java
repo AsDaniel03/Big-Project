@@ -122,4 +122,9 @@ public class groupChatPage extends BasePage {
     public void enterMessage(){
         setMessage.sendKeys(Keys.chord(Keys.ENTER));
     }
+
+    public boolean cantMessage() {
+        return isElementDisplayed(message);
+    }
+
 }

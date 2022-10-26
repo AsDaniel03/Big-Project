@@ -135,6 +135,8 @@ public class groupChatStep {
     }
 
     @Then("user can't send the message")
-    public void userCantTSendTheMessage() {
+    public void userCantTSendTheMessage() throws InterruptedException {
+        Thread.sleep(500);
+        Assert.assertTrue(groupchatPage.cantMessage());
     }
 }
